@@ -1,0 +1,74 @@
+.container {
+    height: 130px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 4px 1px #cecece;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3%;
+}
+
+.menuContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3%;
+}
+
+.searchContainer {
+    border: 1.5px solid #cecece;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    width: fit-content;
+    padding-inline: 10px;
+    padding-block: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    outline: none;
+    font-size: 19px;
+    width: 250px;
+}
+
+.searchIcon {
+    font-size: 25px;
+    color: #808080;
+}
+
+.homeIcon {
+    font-size: 30px;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+.addIcon {
+    font-size: 30px;
+    margin-inline: 15px;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+.profilePicture {
+    border-radius: 30px;
+    border: 2px solid #808080;
+}
