@@ -1,0 +1,15 @@
+.container {
+  position: relative;
+  background-color: white;
+  border: 1.5px solid #cecece;
+  top: 180px;
+  display: flex;
+  overflow-x: scroll;
+  width: 95%;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
