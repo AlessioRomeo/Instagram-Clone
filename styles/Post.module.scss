@@ -1,0 +1,30 @@
+.container {
+  background-color: white;
+  border-radius: 5px;
+  margin-block: 28px;
+  border: 1px solid #cecece;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.headerUsername {
+  display: flex;
+  flex: 1;
+  font-size: 16px;
+}
+
+.userImage {
+  border-radius: 40px;
+  margin-right: 10px;
+  padding: 4px;
+  border: 2px solid #cecece;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+}
