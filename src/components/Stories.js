@@ -15,7 +15,6 @@ function Stories(props) {
             }
         ));
         setStoryUsers(storyUsers);
-        console.log(storyUsers);
     }, []);
     return (
         <div className={styles.container}>

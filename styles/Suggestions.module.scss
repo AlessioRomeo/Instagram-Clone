@@ -1,0 +1,67 @@
+.container {
+  position: relative;
+  padding-inline: calc(30px + ((100vw - 1350px) * ((50 - 30) / (1920 - 1350))));
+}
+
+.topContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.topContainer > h1 {
+  color: #808080;
+  font-weight: 500;
+  margin-left: 5px;
+  font-size: calc(15px + ((100vw - 1350px) * ((16 - 15) / (1920 - 1350))));
+}
+
+.topContainer > button {
+  color: #353535;
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: calc(15px + ((100vw - 1350px) * ((16 - 15) / (1920 - 1350))));
+}
+
+.suggestionsContainer {
+  display: flex;
+  align-items: center;
+  margin-block: 10px;
+}
+
+.image {
+  border-radius: 40px;
+  padding: 3px;
+  border: 2px solid #cecece;
+}
+
+.middleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin-left: 15px;
+}
+
+.middleContainer > h1 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.middleContainer > p {
+  font-size: calc(13px + ((100vw - 1350px) * ((14 - 13) / (1920 - 1350))));
+  color: #808080;
+}
+
+.suggestionsContainer > button {
+  background-color: transparent;
+  border: none;
+  font-size: calc(15px + ((100vw - 1350px) * ((16 - 15) / (1920 - 1350))));
+  font-weight: 500;
+  cursor: pointer;
+  color: #3397fb;
+}

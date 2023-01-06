@@ -1,5 +1,26 @@
 .container {
   position: relative;
   top: 130px;
-  width: 40%;
+  padding-inline: calc(0px + ((100vw - 1350px) * ((150 - 0) / (1920 - 1350))));
+  display: flex;
+}
+
+.innerContainer {
+  width: 65%;
+}
+
+.sideContainer {
+  height: fit-content;
+  width: 35%;
+  border-radius: 5px;
+}
+
+@media (max-width: 1150px) {
+  .innerContainer {
+    width: 100%;
+  }
+
+  .sideContainer {
+    display: none;
+  }
 }

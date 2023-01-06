@@ -10,6 +10,7 @@ function Header(props) {
         <div className={styles.container}>
             <div className={styles.logoContainer}>
                 <Image className={styles.logoText} src={"/medias/logoText.png"} width={180} height={90} alt={"logo"}/>
+                <Image className={styles.logoImage} src={"/medias/logoImage.png"} width={60} height={60} alt={"logo"}/>
             </div>
             <div className={styles.searchContainer}>
                 <IoSearch className={styles.searchIcon}/>
@@ -18,7 +19,7 @@ function Header(props) {
             <div className={styles.menuContainer}>
                 <AiFillHome className={styles.homeIcon}/>
                 <MdOutlineAddCircleOutline className={styles.addIcon}/>
-                <Image className={styles.profilePicture} src={"/medias/profileSignOut.png"} width={50} height={50} alt={"logo"}/>
+                <Image className={styles.profilePicture} src={"/medias/profileSignOut.png"} width={50} height={50} alt={"Profile Picture"}/>
             </div>
         </div>
     );

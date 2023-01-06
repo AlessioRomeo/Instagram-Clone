@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding-inline: calc(30px + ((100vw - 1350px) * ((50 - 30) / (1920 - 1350))));
+  padding-block: 25px;
+}
+
+.profilePicture {
+  border-radius: 40px;
+  padding: 4px;
+  border: 2px solid #cecece;
+}
+
+.middleContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-inline: 25px;
+}
+
+.middleContainer > h1 {
+  font-weight: 500;
+  font-size: calc(17px + ((100vw - 1350px) * ((18 - 17) / (1920 - 1350))));
+  margin-bottom: 5px;
+}
+
+.middleContainer > p {
+  font-size: calc(14px + ((100vw - 1350px) * ((16 - 14) / (1920 - 1350))));
+  color: #808080;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  font-size: calc(16px + ((100vw - 1350px) * ((18 - 16) / (1920 - 1350))));
+  font-weight: 500;
+  cursor: pointer;
+  color: #3397fb;
+}
+
