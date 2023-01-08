@@ -4,8 +4,15 @@ import Image from "next/image";
 import {IoSearch} from "react-icons/io5";
 import {AiFillHome} from "react-icons/ai";
 import {MdOutlineAddCircleOutline} from "react-icons/md";
+import {useSession, signIn, signOut} from "next-auth/react";
+import {useRecoilState} from "recoil";
+import {modalState} from "../../atom/modalAtom";
 
 function Header(props) {
+
+    const {data: session} = useSession();
+    const [open, setOpen] = useRecoilState(modalState)
+
     return (
         <div className={styles.container}>
             <div className={styles.logoContainer}>
@@ -17,9 +24,15 @@ function Header(props) {
                 <input className={styles.search} placeholder={"Search"} type="text"/>
             </div>
             <div className={styles.menuContainer}>
-                <AiFillHome className={styles.homeIcon}/>
-                <MdOutlineAddCircleOutline className={styles.addIcon}/>
-                <Image className={styles.profilePicture} src={"/medias/profileSignOut.png"} width={50} height={50} alt={"Profile Picture"}/>
+                {session ? (
+                    <>
+                        <AiFillHome className={styles.homeIcon}/>
+                        <MdOutlineAddCircleOutline onClick={()=>setOpen(true)} className={styles.addIcon}/>
+                        <Image className={styles.profilePicture} src={session.user.image} onClick={signOut} width={50} height={50} alt={"Profile Picture"}/>
+                    </>
+                ): (
+                    <button className={styles.buttonSignout} onClick={signIn}>Sign in</button>
+                )}
             </div>
         </div>
     );

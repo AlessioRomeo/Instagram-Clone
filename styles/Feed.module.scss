@@ -9,6 +9,17 @@
   width: 65%;
 }
 
+.containerSignOut {
+  position: relative;
+  top: 130px;
+  padding-inline: calc(0px + ((100vw - 800px) * ((600 - 0) / (1920 - 800))));
+  display: flex;
+}
+
+.innerContainerSignOut {
+  width: 100%;
+}
+
 .sideContainer {
   height: fit-content;
   width: 35%;
