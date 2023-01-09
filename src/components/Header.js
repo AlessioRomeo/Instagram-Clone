@@ -7,6 +7,7 @@ import {MdOutlineAddCircleOutline} from "react-icons/md";
 import {useSession, signIn, signOut} from "next-auth/react";
 import {useRecoilState} from "recoil";
 import {modalState} from "../../atom/modalAtom";
+import Link from "next/link";
 
 function Header(props) {
 
@@ -24,9 +25,9 @@ function Header(props) {
                 <input className={styles.search} placeholder={"Search"} type="text"/>
             </div>
             <div className={styles.menuContainer}>
+                <Link href={"/"} className={styles.link}><AiFillHome className={styles.homeIcon}/></Link>
                 {session ? (
                     <>
-                        <AiFillHome className={styles.homeIcon}/>
                         <MdOutlineAddCircleOutline onClick={()=>setOpen(true)} className={styles.addIcon}/>
                         <Image className={styles.profilePicture} src={session.user.image} onClick={signOut} width={50} height={50} alt={"Profile Picture"}/>
                     </>

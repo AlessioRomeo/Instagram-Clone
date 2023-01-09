@@ -1,24 +1,18 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Post from "./Post";
+import {collection, onSnapshot, query, orderBy} from 'firebase/firestore'
+import {db} from "../../firebase";
 
 function Posts(props) {
 
-    const posts = [
-        {
-            id: "1",
-            username: "alessioromeo",
-            userImage: "https://images.pexels.com/photos/11805196/pexels-photo-11805196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            image: "https://images.pexels.com/photos/2190283/pexels-photo-2190283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            caption: "This is my first post"
-        },
-        {
-            id: "2",
-            username: "ariabagheri",
-            userImage: "https://images.pexels.com/photos/11805196/pexels-photo-11805196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            image: "https://images.pexels.com/photos/77171/pexels-photo-77171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            caption: "This is my second post"
-        }
-    ]
+    const [posts, setPosts] = useState([]);
+    useEffect(()=>{
+        const unsubscribe = onSnapshot(
+            query(collection(db, 'posts'), orderBy(("timestamp"), "desc")), (snapshot)=>{
+                setPosts(snapshot.docs);
+            }
+        );
+    }, [db]);
 
     return (
         <div>
@@ -27,10 +21,10 @@ function Posts(props) {
                     <Post
                         key = {post.id}
                         id = {post.id}
-                        username = {post.username}
-                        userImage = {post.userImage}
-                        image = {post.image}
-                        caption = {post.caption}
+                        username = {post.data().username}
+                        userImage = {post.data().profileImage}
+                        image = {post.data().image}
+                        caption = {post.data().caption}
                     />
                 ))
             }

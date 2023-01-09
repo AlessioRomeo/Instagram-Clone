@@ -3,10 +3,11 @@
   top: 130px;
   padding-inline: calc(0px + ((100vw - 1350px) * ((150 - 0) / (1920 - 1350))));
   display: flex;
+  justify-content: center;
 }
 
 .innerContainer {
-  width: 65%;
+  width: 50%;
 }
 
 .containerSignOut {
